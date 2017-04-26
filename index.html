@@ -28,7 +28,14 @@
     request.responseType = 'json';
     request.send();  
     request.onload = function() {
+    var dividends2017 = request.response;
+    populateHeader(dividends2017);
+    var myPara = document.createElement('p');
+    myPara.textContent = jsonObj.[0].A;  
+    header.appendChild(myPara);  
+ /**   
     var superHeroes = request.response;
+      
     populateHeader(superHeroes);
     showHeroes(superHeroes);
     }
@@ -36,7 +43,7 @@
     var myH1 = document.createElement('h1');
     myH1.textContent = jsonObj['squadName'];
     header.appendChild(myH1);
-
+      
     var myPara = document.createElement('p');
     myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
     header.appendChild(myPara);
@@ -74,6 +81,7 @@
     section.appendChild(myArticle);
   }
 }  
+*//
     </script>
   </body>
 </html>
