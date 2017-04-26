@@ -28,14 +28,8 @@
     request.responseType = 'json';
     request.send();  
     request.onload = function() {
-    var dividends2017 = request.response;
-    populateHeader(dividends2017);
-    var myPara = document.createElement('p');
-    myPara.textContent = jsonObj[0].A;  
-    header.appendChild(myPara);  
- /**   
     var superHeroes = request.response;
-      
+ 
     populateHeader(superHeroes);
     showHeroes(superHeroes);
     }
@@ -81,7 +75,7 @@
     section.appendChild(myArticle);
   }
 }  
-*//
+
     </script>
   </body>
 </html>
