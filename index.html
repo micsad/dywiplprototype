@@ -4,9 +4,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   </head>
   <body>
+	  <header>
+	  </header>
+	  <section>
+	  </section>	  
     <h1>This is a sample homepage
     </h1>
     <script>
+
+var header = document.querySelector('header');
+var section = document.querySelector('section');	    
 var requestURL = 'https://raw.githubusercontent.com/micsad/dywiplprototype/master/datatable1.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -16,6 +23,15 @@ request.onload = function() {
 var dividends2017 = request.response;
 populateHeader(dividends2017);
 showDividends(dividends2017);
+}
+function populateHeader(jsonObj) {
+  var myH1 = document.createElement('h1');
+  myH1.textContent = jsonObj['dividends2017'];
+  header.appendChild(myH1);
+
+  var myPara = document.createElement('p');
+  myPara.textContent = 'Hometown: ' + jsonObj['dividends2017'] + ' // Formed: ' + jsonObj['dividends2017'];
+  header.appendChild(myPara);
 }
 	</script> 
   </body>
