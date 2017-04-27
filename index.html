@@ -7,20 +7,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
-  </head>
+    </head>
 
   <body>
 
-      <header>
+    <div id="divClients">
+ $.get('https://raw.githubusercontent.com/micsad/dywiplprototype/master/datatable1.json', function(data){
+    $('#divClients').html(data.dividends2017[0]company);
+});     
+    </div>
 
-      </header>
-
-      <section>
-
-      </section>
-
-    <script>
     
-    </script>
+  
   </body>
 </html>
